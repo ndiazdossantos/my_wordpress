@@ -7,7 +7,8 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<h1><?php bloginfo( 'name' ); ?></h1>
+<?php get_header(); #llamamos a la clase header.php y cargamos su contenido?>
+<h1><?php bloginfo( 'name' ); ?> </h1>
 <h2><?php bloginfo( 'description' ); ?></h2>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -36,7 +37,7 @@
     <p>No posts found. :(</p>
 
 <?php endif; ?>
-<?php get_footer();?>
-<?php wp_footer(); ?>
+<?php get_footer();#llamamos a la clase footer.php y cargamos su contenido?>
+<?php wp_footer(); #mostramos la barra de admin si estamos logeados como tal?>
 </body>
 </html>
