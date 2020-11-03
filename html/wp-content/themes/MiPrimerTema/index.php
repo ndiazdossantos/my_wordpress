@@ -36,6 +36,7 @@
     <p>No posts found. :(</p>
 
 <?php endif; ?>
+<?php get_footer();?>
 <?php wp_footer(); ?>
 </body>
 </html>
